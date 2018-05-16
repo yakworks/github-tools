@@ -1,0 +1,77 @@
+token: 6fa8b6510b0a6d95f555847698df9706bde88a3a
+repos:
+  - yakworks/sandbox
+  - yakworks/idea-bank
+  - yakworks/gorm-tools
+  - yakworks/gorm-rest-api
+  - yakworks/mkdocs-material-components
+  - yakworks/view-tools
+  - yakworks/grails-jasper-reports
+  - yakworks/dock9
+  - yakworks/gradle-plugins
+
+deleteLabels: true # removes the github repo labels if not in the list below
+labels:
+  - name: 'Status: On Deck'
+    color: 'fbca04'
+  - name: 'Status: On Hold'
+    color: 'c5def5'
+  - name: 'Status: Stuck'
+    color: 'b60205'
+  - name: 'List: Icebox'
+    color: 'c5def5'
+  - name: 'List: Backlog'
+    color: '374a14'
+  - name: 'List: In Progress'
+    color: '00af0b'
+  - name: 'List: PR/Review'
+    color: 'c2e0c6'
+  - name: 'List: Go/Ready'
+    color: '33691E'
+  - name: 'List: QA'
+    color: '006b75'
+  - name: 'Priority: Wish List'
+    color: 'fef2c0' #ffce71
+  - name: 'Priority: Minor'
+    color: 'ffa700' #ffa700
+  - name: 'Priority: Major'
+    color: 'ff7138' #ff7138
+  - name: 'Priority: Critical'
+    color: 'd93f0b' #d93f0b
+  - name: 'Priority: Blocker Hot'
+    color: 'B71C1C' #ee0701
+  - name: 'Type: Bug'
+    color: 'b60205'
+  - name: 'Type: Design'
+    color: '0052cc'
+  - name: 'Type: Feature'
+    color: '1d76db'
+  - name: 'Type: Epic'
+    color: '0052cc'
+  - name: 'Type: Story'
+    color: '0052cc'
+  - name: 'Type: Question'
+    color: '1d76db'
+  - name: 'Type: Research'
+    color: '1d76db'
+  - name: 'Type: Refactor'
+    color: '5319e7'
+  - name: 'Type: Sharpen Saw'
+    color: '5319e7'
+  - name: 'QA: Cust'
+    color: '006b75'
+  - name: 'X: Duplicate'
+    color: 'D2DAE1'
+  - name: 'X: Obsolete'
+    color: 'D2DAE1'
+  - name: 'X: Cannot Reproduce'
+    color: 'D2DAE1'
+  - name: 'X: Should close?'
+    color: 'D2DAE1'
+  - name: 'help wanted'
+    color: '008672'
+  - name: 'good first issue'
+    color: '7057ff'
+  - name: 'billable'
+    color: '7057ff'
+
