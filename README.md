@@ -30,13 +30,13 @@ labels:
 
 ### Install & Run
 
-1. Clone the repo: `git clone https://github.com/Wiredcraft/gh-labels.git`
-1. Get in the folder: `cd gh-labels`
+1. Get in the label folder. Edit the labels.yml the way you want them.
+1. add env var GH_WRITE_TOKEN to the token from https://github.com/settings/tokens. you will be prompted for it if you don't.
 1. Optional: Create and activate your virtualenv;
 
         virtualenv venv
         source venv/bin/activate
 
-1. Install dependencies; `pip install -r requirements.txt`
-1. Run it; `python github.py`
+1. Install dependencies; `pip or pip3 install -r requirements.txt`
+1. Run it; `python create_labels.py`
 

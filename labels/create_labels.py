@@ -1,16 +1,22 @@
 import json
 import requests
 import yaml
+import os
 
 #token = raw_input('Paste your GitHub token? (see https://github.com/settings/tokens): ')
 #repo = raw_input('Which repo do you want to setup? (e.g. Wiredcraft/test): ')
+
+token = os.environ.get('GH_WRITE_TOKEN')
+if token == '':
+  token = raw_input('Env var not set, Paste your GitHub token? (see https://github.com/settings/tokens): ')
+  pass
 
 with open('labels.yml', 'r') as f:
   labelsYml = yaml.load(f)
 
 default_labels = labelsYml['labels']
 url = '' # setup below
-token = labelsYml['token']
+#token = labelsYml['token']
 headers = {'Authorization': 'token %s' % token,
   'Accept': 'application/vnd.github.v3+json',
   'Accept': 'application/vnd.github.symmetra-preview+json'}  #allows description to be inserted
