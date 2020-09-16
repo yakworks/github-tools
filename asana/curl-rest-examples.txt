@@ -1,0 +1,17 @@
+curl -H "Authorization: Bearer 0/afdc4bd849b88ffaaefb821c755cc41d" \
+https://app.asana.com/api/1.0/tags \
+--data-urlencode "name=fluffy" \
+--data-urlencode "workspace=15679389034876"
+
+curl -H "Authorization: Bearer 0/afdc4bd849b88ffaaefb821c755cc41d" \
+https://app.asana.com/api/1.0/tags/679586309383791
+
+# add tag to task
+curl -H "Authorization: Bearer 0/afdc4bd849b88ffaaefb821c755cc41d" \
+https://app.asana.com/api/1.0/tasks/672616809863682/addTag \
+--data-urlencode "tag=679586309383791"
+
+#update tag color
+curl --request PUT -H "Authorization: Bearer 0/afdc4bd849b88ffaaefb821c755cc41d" \
+https://app.asana.com/api/1.0/tags/679586309383791 \
+--data-urlencode "color=dark-red"

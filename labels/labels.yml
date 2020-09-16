@@ -1,142 +1,172 @@
+# got some basic ideas here https://www.quora.com/What-is-the-best-way-to-name-GitHub-issue-labels
+# and from jira for organization
+
 repos:
-  # - 9ci/rcm
-  # - 9ci/9ci
-  # - 9ci/ar
-  # - 9ci/ar-api
-  # - 9ci/autocash
-  # - 9ci/epay
-  # - 9ci/nine-db
-  # - 9ci/rally
+  #- 9ci/9ci
+  - 9ci/rcm
+  - 9ci/rally
+  - 9ci/ar
+  - 9ci/ar-api
+  - 9ci/autocash
+  - 9ci/epay
+  - 9ci/nine-db
 
-  - yakworks/sandbox
-  - yakworks/idea-bank
-  - yakworks/gorm-tools
-  - yakworks/gorm-rest-api
-  - yakworks/mkdocs-material-components
-  - yakworks/view-tools
-  - yakworks/grails-jasper-reports
-  - yakworks/dock9
-  - yakworks/gradle-plugins
-  - yakworks/codenarc-extra
-  - yakworks/grails-freemarker
-  - yakworks/quartz-config-scheduler
+  # - yakworks/sandbox
+  # - yakworks/idea-bank
+  # - yakworks/gorm-tools
+  # - yakworks/gorm-rest-api
+  # - yakworks/mkdocs-material-components
+  # - yakworks/view-tools
+  # - yakworks/grails-jasper-reports
+  # - yakworks/dock9
+  # - yakworks/gradle-plugins
+  # - yakworks/codenarc-extra
+  # - yakworks/grails-freemarker
+  # - yakworks/quartz-config-scheduler
 
-deleteLabels: true # removes the github repo labels if not in the list below
+deleteLabels: false # removes the github repo labels if not in the list below
 labels:
-  - name: '~security risk'
-    description: don't let the rats in. possibly hole
-    color: fef2c0
-  - name: '~lets do it'
-    description: issue has legs, plan it, white board it, make it happen
-    color: b7438d
-  - name: '~research'
-    description: google it, prototype it, think hard, stackoverflow the hell out of it.
-    color: c5def5
-  - name: '~help wanted'
-    color: c5def5
-  - name: '~good first issue'
-    description: tackle these if you are just getting familiar with code base
-    color: c5def5
-  - name: '~refactor'
-    description: codefu style. make it DRY, add comments, clean it up
-    color: c5def5
 
-  - name: Epic #Zenhub epic
-    description: a big user story issue that will contain issues for a larger goal
+  - name: Epic #Zenhub epic, name can't be changed
+    description: a big user story issue, holds smaller issues for a larger goal
     color: 3E4B9E
 
-  - name: 'Status: Design'
-    description: Game plan, strategy and blueprints needed
-    color: bfdadc
-  - name: 'Status: On Deck'
-    description: next up, ready to go into next work sprint backlog
-    color: 006b75
-  - name: 'Status: On Hold'
-    description: work temporarily halted for acceptable reasons
-    color: 'bfdadc'
-  - name: 'Status: Stuck'
-    description: progress imparied, needs info or design help
-    color: 'fbca04'
-  - name: 'Status: Icebox'
-    description: low priority future ideas to stay on the radar
-    color: 'bfdadc'
-
-  - name: 'Priority: Wish List'
-    description: Wizz bang nice to have, cosmetic problem, misspelt words
-    color: 'bfdadc'
-  - name: 'Priority: Minor'
-    description: Minor loss of function, workaround is possible
-    color: 'fbca04' #ffa700
-  - name: 'Priority: Major'
-    description: Major loss of function, incorrect output
-    color: 'ffa700' #ff7138
-  - name: 'Priority: Critical'
-    description: Crashes server, loss of data, severe memory leak
-    color: 'd93f0b' #d93f0b
-  - name: 'Priority: Blocker Hot'
-    description: Blocks work, development and/or testing
+  - name: 'P1/Blocker'
+    description: Highest importance! Work is stopped or testing is blocked
     color: 'B71C1C' #ee0701
-
-  - name: 'Type: Bug'
-    description: A problem which impairs or prevents this from functioning correctly.
-    color: 'e99695'
-  # - name: 'Type: Epic' #Using zenhub, so can't have type prefix
-  #   color: '0052cc'
-  - name: 'Type: Feature'
-    description: A new brand new feature story
-    color: 'c2e0c6'
-  - name: 'Type: Idea Bank'
-    description: Investigate and discuss. May end up as an epic or set of features or sharpen the saws
-    color: 'c2e0c6'
-  - name: 'Type: Improvement'
-    description: An enhancement to existing features or refactoring
-    color: 'c2e0c6'
-  - name: 'Type: Support/Question'
-    description: Answer the question and make sure docs are adjusted accordingly
-    color: 'c2e0c6'
-  - name: 'Type: Technical Debt'
-    description: ugly hacks, brewing mess, future bugs, undocumented crap, unmaintainable, security risk
+  - name: 'P2/Critical'
+    description: Severe, crashes server, data loss, severe memory leaks
+    color: 'd93f0b' #d93f0b
+  - name: 'P3/High'
+    description: Major importance. Major Bug - loss of function, incorrect output, no good workaround
+    color: 'ffa700' #ff7138
+  - name: 'P4/Medium'
+    description: Minor importance. Minor Bug - loss of function but workaround is possible
+    color: 'fbca04' #ffa700
+  - name: 'P5/Low'
+    description: Wish list or nice to have, Trivial Bug - cosmetic problem, misspelt words
     color: 'fef2c0'
 
-  - name: 'X: Duplicate'
+  - name: 'Status/Design'
+    description: Game plan, strategy and blueprints needed
+    color: 5319e7
+  - name: 'Status/Hold'
+    description: work temporarily halted for acceptable reasons
+    color: '5319e7'
+  - name: 'Status/Icebox'
+    description: Issue is on ice but we want to do in future
+    color: '5319e7'
+  - name: 'Status/On-Deck'
+    description: next up, ready to be worked on or go into next work sprint backlog
+    color: 5319e7
+  - name: 'Status/QA'
+    description: QA acceptance by end user before close
+    color: '5319e7'
+  - name: 'Status/Waiting'
+    description: progress stopped, waiting for reply, more info or design help
+    color: 'c10062'
+
+  - name: 'Type/Bug'
+    description: A problem which impairs or prevents this from functioning correctly.
+    color: 'ea4e9d'
+  # - name: 'Type: Epic' #Using zenhub, so can't have type prefix
+  #   color: '0052cc'
+  - name: 'Type/Feature'
+    description: A new brand new feature told as a story
+    color: '9337db'
+  - name: 'Type/Improvement'
+    description: An enhancement to existing features or refactoring
+    color: '9337db'
+  - name: 'Type/Support'
+    description: question? make sure docs or FAQ are adjusted accordingly
+    color: '9337db'
+  - name: 'Type/Tech-Debt'
+    description: Technical Debt for ugly hacks, brewing mess, future bug, undocumented, unmaintainable
+    color: '9337db'
+  - name: 'Type/Task'
+    description: general generic to-do
+    color: '9337db'
+
+  - name: 'tag/Security'
+    description: don't let the rats in. possibly hole
+    color: f9d0c4
+  - name: 'tag/Lets-Do-It'
+    description: issue or idea has legs, Lets plan it, white board it, make it happen
+    color: 1d76db
+  - name: 'tag/Research'
+    description: google it, prototype it, think hard, stackoverflow the hell out of it.
+    color: c5def5
+  - name: 'tag/Help-Wanted'
+    description: we welcome help and pull requests
+    color: c5def5
+  - name: 'tag/Good-First-Issue'
+    description: tackle these to get started with code base
+    color: c5def5
+  - name: 'tag/Refactor'
+    description: codefu style. make it DRY, add comments, clean it up, do it better
+    color: c5def5
+  - name: 'tag/Billable'
+    description: Log in harvest, Work on task is billable to a customer
+    color: 'a4cf30'
+  - name: 'tag/Idea-Bank'
+    description: Investigate and discuss. May end up as an epic or set of features or sharpen the saws
+    color: 'c5def5'
+  - name: 'tag/Docs'
+    description: Update or create documentation
+    color: 'c5def5'
+  - name: 'tag/Tooling'
+    description: CI, docker, software or hardware stuff
+    color: 'c5def5'
+  - name: 'tag/Demo'
+    color: 'c5def5'
+  - name: 'tag/Sharpen-Saw'
+    description: Learning, habits, get better, get faster
+    color: 'c5def5'
+
+  - name: 'X/Duplicate'
     color: 'D2DAE1'
-  - name: 'X: Invalid'
+  - name: 'X/Invalid'
     color: 'D2DAE1'
-  - name: 'X: Cant Reproduce'
+  - name: 'X/Cant-Reproduce'
     color: 'D2DAE1'
-  - name: 'X: Future Revisit'
-    description: Keep as we may reopen in the future but closing for now to reduce noise
-    color: 'D2DAE1'
-  - name: 'X: Should close?'
+  - name: 'X/Future-Revisit'
+    description: We may reopen in the future but closing for now to reduce noise
     color: 'D2DAE1'
 
-  # 9ci and rcm repo specific
-  # - name: 'QA: Cust'
-  #   description: Customer owns QA before we close
-  #   color: '006b75'
-  # - name: '~billable'
-  #   description: Work on task is billable in harvest
-  #   color: 'cc317c'
-  # - name: 'Type: QA/Test'
-  #   description: unit, functional test or manual QA task
-  #   color: '1d76db'
+  # all 9ci repo specific
 
-  # 9ci repo specific
-  # - name: 'Type: Sharpen Saw'
-  #   description: Learn, productivity, implement tools, scripts to keep it DRY
-  #   color: '1d76db'
-  # - name: 'Type: Infrastructure'
-  #   description: hardware, software, CI and scripts to keep the machine well oiled
-  #   color: '1d76db'
+  - name: 'App/Greenbill'
+    color: '006b75'
+  - name: 'App/OCI'
+    description: OCR app
+    color: '006b75'
+
+  # key custs for 9ci project (keep out of RCM and others)
+  # - name: 'Cust/AAP'
+  #   color: 'ededed'
+  # - name: 'Cust/CED'
+  #   color: 'ededed'
+  # - name: 'Cust/Delta'
+  #   color: 'ededed'
+  # - name: 'Cust/Kolcraft'
+  #   color: 'ededed'
+  # - name: 'Cust/Mouser'
+  #   color: 'ededed'
+  # - name: 'Cust/Sherwin'
+  #   color: 'ededed'
+  # - name: 'Cust/9ci'
+  #   color: 'ededed'
+  # - name: 'Cust/Onecall'
+  #   color: 'ededed'
 
   # FOR FUTURE USE WHEN webhooks can update labels based on zenhub pipeline
-  # - name: 'List: Backlog'
+  # - name: 'List/Backlog'
   #   color: '374a14'
-  # - name: 'List: In Progress'
+  # - name: 'List/Doing'
   #   color: '0e8a16'
-  # - name: 'List: Review'
+  # - name: 'List/Review'
   #   color: 'cc317c'
-  # - name: 'List: Ready'
+  # - name: 'List/Ready'
   #   color: '33691E'
-  # - name: 'List: QA/Done'
+  # - name: 'List/Done/QA'
   #   color: '006b75'
