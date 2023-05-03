@@ -3,13 +3,15 @@
 
 repos:
   #- 9ci/9ci
-  - 9ci/rcm
-  - 9ci/rally
-  - 9ci/ar
-  - 9ci/ar-api
-  - 9ci/autocash
-  - 9ci/epay
-  - 9ci/nine-db
+  # - 9ci/domain9
+  - 9ci/cust-rndc-ext
+  # - 9ci/rcm
+  # - 9ci/rally
+  # - 9ci/ar
+  # - 9ci/ar-api
+  # - 9ci/autocash
+  # - 9ci/epay
+  # - 9ci/nine-db
 
   # - yakworks/sandbox
   # - yakworks/idea-bank
@@ -31,24 +33,24 @@ labels:
     description: a big user story issue, holds smaller issues for a larger goal
     color: 3E4B9E
 
-  - name: 'P1/Blocker'
-    description: Highest importance! Work is stopped or testing is blocked
-    color: 'B71C1C' #ee0701
+  # - name: 'P1/Blocker'
+  #   description: Highest importance! Work is stopped or testing is blocked
+  #   color: 'B71C1C' #ee0701
   - name: 'P2/Critical'
-    description: Severe, crashes server, data loss, severe memory leaks
+    description: Highest Importance. HOT
     color: 'd93f0b' #d93f0b
   - name: 'P3/High'
-    description: Major importance. Major Bug - loss of function, incorrect output, no good workaround
+    description: Major importance. Major Issue - loss of function, incorrect output, no good workaround
     color: 'ffa700' #ff7138
   - name: 'P4/Medium'
-    description: Minor importance. Minor Bug - loss of function but workaround is possible
+    description: Minor importance. Minor Issue - workaround is possible
     color: 'fbca04' #ffa700
   - name: 'P5/Low'
-    description: Wish list or nice to have, Trivial Bug - cosmetic problem, misspelt words
+    description: Wish list or nice to have, Trivial Issue but want it if its simple - cosmetic problem, misspelt words
     color: 'fef2c0'
 
   - name: 'Status/Design'
-    description: Game plan, strategy and blueprints needed
+    description: Game plan, strategy, specs, blueprints, or user story needed
     color: 5319e7
   - name: 'Status/Hold'
     description: work temporarily halted for acceptable reasons
@@ -81,14 +83,14 @@ labels:
     description: question? make sure docs or FAQ are adjusted accordingly
     color: '9337db'
   - name: 'Type/Tech-Debt'
-    description: Technical Debt for ugly hacks, brewing mess, future bug, undocumented, unmaintainable
+    description: Technical Debt for ugly hacks, a brewing mess, future bug, undocumented, unmaintainable, etc.
     color: '9337db'
   - name: 'Type/Task'
     description: general generic to-do
     color: '9337db'
 
   - name: 'tag/Security'
-    description: don't let the rats in. possibly hole
+    description: don't let the rats in. possibly a hole and needs to be looked at
     color: f9d0c4
   - name: 'tag/Lets-Do-It'
     description: issue or idea has legs, Lets plan it, white board it, make it happen
@@ -96,12 +98,12 @@ labels:
   - name: 'tag/Research'
     description: google it, prototype it, think hard, stackoverflow the hell out of it.
     color: c5def5
-  - name: 'tag/Help-Wanted'
-    description: we welcome help and pull requests
-    color: c5def5
-  - name: 'tag/Good-First-Issue'
-    description: tackle these to get started with code base
-    color: c5def5
+  # - name: 'tag/Help-Wanted'
+  #   description: we welcome help and pull requests
+  #   color: c5def5
+  # - name: 'tag/Good-First-Issue'
+  #   description: tackle these to get started with code base
+  #   color: c5def5
   - name: 'tag/Refactor'
     description: codefu style. make it DRY, add comments, clean it up, do it better
     color: c5def5
@@ -114,14 +116,14 @@ labels:
   - name: 'tag/Docs'
     description: Update or create documentation
     color: 'c5def5'
-  - name: 'tag/Tooling'
-    description: CI, docker, software or hardware stuff
-    color: 'c5def5'
-  - name: 'tag/Demo'
-    color: 'c5def5'
-  - name: 'tag/Sharpen-Saw'
-    description: Learning, habits, get better, get faster
-    color: 'c5def5'
+  # - name: 'tag/Tooling'
+  #   description: CI, docker, software or hardware stuff
+  #   color: 'c5def5'
+  # - name: 'tag/Demo'
+  #   color: 'c5def5'
+  # - name: 'tag/Sharpen-Saw'
+  #   description: Learning, habits, get better, get faster
+  #   color: 'c5def5'
 
   - name: 'X/Duplicate'
     color: 'D2DAE1'
@@ -135,11 +137,11 @@ labels:
 
   # all 9ci repo specific
 
-  - name: 'App/Greenbill'
-    color: '006b75'
-  - name: 'App/OCI'
-    description: OCR app
-    color: '006b75'
+  # - name: 'App/Greenbill'
+  #   color: '006b75'
+  # - name: 'App/OCI'
+  #   description: OCR app
+  #   color: '006b75'
 
   # key custs for 9ci project (keep out of RCM and others)
   # - name: 'Cust/AAP'

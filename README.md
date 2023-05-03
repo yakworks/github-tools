@@ -12,7 +12,7 @@ This little Python script prompts you for a GitHub repository (and a GitHub toke
 and set up the labels for this repo to match what you have in a [`labels.yml`](labels/labels.yml) file. This file includes a simple
 list of label settings;
 
-get a token from https://github.com/settings/tokens
+> 👀 get a token from https://github.com/settings/tokens and make sure its set in GITHUB_TOKEN environment variable 
 
 ```
 token: 6fa8b6510.....

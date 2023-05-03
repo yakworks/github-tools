@@ -6,13 +6,13 @@ import os
 #token = raw_input('Paste your GitHub token? (see https://github.com/settings/tokens): ')
 #repo = raw_input('Which repo do you want to setup? (e.g. Wiredcraft/test): ')
 
-token = os.environ.get('GH_WRITE_TOKEN')
+token = os.environ.get('GITHUB_TOKEN')
 if token == '':
   token = raw_input('Env var not set, Paste your GitHub token? (see https://github.com/settings/tokens): ')
   pass
 
 with open('labels.yml', 'r') as f:
-  labelsYml = yaml.load(f)
+  labelsYml = yaml.load(f, Loader=yaml.FullLoader)
 
 default_labels = labelsYml['labels']
 url = '' # setup below
@@ -45,7 +45,7 @@ def set_labels(labels):
        delete_label(label)
 
 def update_label(label):
-  print 'Update label (%s) on GH' % label
+  print('Update label (%s) on GH' % label)
   try:
     response = requests.patch(url + '/' + label['name'], data=json.dumps(label), headers=headers)
     response.raise_for_status()
@@ -54,7 +54,7 @@ def update_label(label):
     return e
 
 def create_label(label):
-  print 'Create label (%s) on GH' % label['name']
+  print('Create label (%s) on GH' % label['name'])
   try:
     response = requests.post(url, data=json.dumps(label), headers=headers)
     response.raise_for_status()
@@ -63,7 +63,7 @@ def create_label(label):
     return e
 
 def delete_label(label):
-  print 'Delete label (%s) from GH' % label
+  print('Delete label (%s) from GH' % label)
   try:
     response = requests.delete(url + '/' + label, headers=headers)
     response.raise_for_status()
